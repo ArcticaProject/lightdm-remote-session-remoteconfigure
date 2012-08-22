@@ -16,6 +16,21 @@ EXTRA_DIST += uccsconfigure.desktop.in
 CLEANFILES += uccsconfigure.desktop
 
 ###############################
+# The session script
+###############################
+
+session_startdir = $(pkglibexecdir)
+session_start_SCRIPTS = \
+	uccsconfigure-session
+
+uccsconfigure-session: uccsconfigure-session.in
+	@sed -e "s|\@pkglibexecdir\@|$(pkglibexecdir)|" $< > $@
+	@chmod +x $@
+
+EXTRA_DIST += uccsconfigure-session.in
+CLEANFILES += uccsconfigure-session
+
+###############################
 # Dist check stuff
 ###############################
 

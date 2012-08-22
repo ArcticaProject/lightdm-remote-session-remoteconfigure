@@ -1,0 +1,5 @@
+#!/bin/bash
+
+
+# Final thing is to run the standard Unity session
+gnome-session --session=ubuntu
