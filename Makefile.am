@@ -1,7 +1,23 @@
-
 EXTRA_DIST =
-
 CLEANFILES =
+
+###############################
+# The session configuration
+###############################
+
+lightdm_sessiondir = $(datadir)/lightdm/remote-sessions
+lightdm_session_DATA = \
+	uccsconfigure.desktop
+
+%.desktop: %.desktop.in
+	@sed -e "s|\@pkglibexecdir\@|$(pkglibexecdir)|" $< > $@
+
+EXTRA_DIST += uccsconfigure.desktop.in
+CLEANFILES += uccsconfigure.desktop
+
+###############################
+# Dist check stuff
+###############################
 
 DISTCHECK_CONFIGURE_FLAGS = --enable-localinstall
 
