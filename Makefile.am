@@ -10,7 +10,7 @@ lightdm_session_DATA = \
 	uccsconfigure.desktop
 
 %.desktop: %.desktop.in
-	@sed -e "s|\@pkglibexecdir\@|$(pkglibexecdir)|" $< > $@
+	@sed -e "s|\@pkgdatadir\@|$(pkgdatadir)|" $< > $@
 
 EXTRA_DIST += uccsconfigure.desktop.in
 CLEANFILES += uccsconfigure.desktop
@@ -29,7 +29,7 @@ EXTRA_DIST += lightdm-remote-uccsconfigure
 # The session script
 ###############################
 
-session_startdir = $(pkglibexecdir)
+session_startdir = $(pkgdatadir)
 session_start_SCRIPTS = \
 	uccsconfigure-session
 
