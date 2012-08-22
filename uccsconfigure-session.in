@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Set up a Firefox autostart
+mkdir -p ~/.config/autostart/
+cp @pkgdatadir@/firefox-uccsconfigure.desktop ~/.config/autostart/
 
 # Final thing is to run the standard Unity session
 gnome-session --session=ubuntu

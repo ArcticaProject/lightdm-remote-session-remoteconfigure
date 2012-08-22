@@ -34,11 +34,21 @@ session_start_SCRIPTS = \
 	uccsconfigure-session
 
 uccsconfigure-session: uccsconfigure-session.in
-	@sed -e "s|\@pkglibexecdir\@|$(pkglibexecdir)|" $< > $@
+	@sed -e "s|\@pkgdatadir\@|$(pkgdatadir)|" $< > $@
 	@chmod +x $@
 
 EXTRA_DIST += uccsconfigure-session.in
 CLEANFILES += uccsconfigure-session
+
+###############################
+# Autostart Firefox
+###############################
+
+autostart_filedir = $(pkgdatadir)
+autostart_file_DATA = \
+	firefox-uccsconfigure.desktop
+
+EXTRA_DIST = firefox-uccsconfigure.desktop
 
 ###############################
 # Dist check stuff

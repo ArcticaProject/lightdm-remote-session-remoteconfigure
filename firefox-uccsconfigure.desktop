@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Name=Configure UCCS
+Comment=Configure UCCS using the web
+Keywords=Internet;WWW;Browser;Web;Explorer
+Exec=firefox http://uccs.landscape.canonical.com/ 
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=firefox
+Categories=GNOME;GTK;Network;WebBrowser;
+StartupWMClass=Firefox
+StartupNotify=true
+X-GNOME-Autostart-Phase=Application
