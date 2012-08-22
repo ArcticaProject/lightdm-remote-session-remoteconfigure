@@ -16,6 +16,16 @@ EXTRA_DIST += uccsconfigure.desktop.in
 CLEANFILES += uccsconfigure.desktop
 
 ###############################
+# The PAM session
+###############################
+
+pam_sessiondir = $(sysconfdir)/pam.d/
+pam_session_DATA = \
+	lightdm-remote-uccsconfigure
+
+EXTRA_DIST += lightdm-remote-uccsconfigure
+
+###############################
 # The session script
 ###############################
 
