@@ -19,10 +19,7 @@
 mkdir -p ~/.config/autostart/
 cp @pkgdatadir@/firefox-uccsconfigure.desktop ~/.config/autostart/
 
-# Set up the Unity environment
-export DESKTOP_SESSION="ubuntu"
-export GDMSESSION="ubuntu"
-export XDG_CURRENT_DESKTOP="Unity"
+# Set up the Compiz profile
 export COMPIZ_CONFIG_PROFILE="ubuntu"
 
 # Final thing is to run the standard Unity session
