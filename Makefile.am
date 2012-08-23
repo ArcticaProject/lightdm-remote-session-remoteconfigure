@@ -48,7 +48,8 @@ autostart_filedir = $(pkgdatadir)
 autostart_file_DATA = \
 	firefox-uccsconfigure.desktop
 
-EXTRA_DIST += firefox-uccsconfigure.desktop
+EXTRA_DIST += firefox-uccsconfigure.desktop.in
+CLEANFILES += firefox-uccsconfigure.desktop
 
 ###############################
 # Dist check stuff
