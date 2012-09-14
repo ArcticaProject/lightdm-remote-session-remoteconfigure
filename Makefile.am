@@ -54,7 +54,7 @@ uccsconfigure_session_wrapper_CFLAGS = \
 	-Wall -Werror
 
 ###############################
-# Apparmor for session script
+# Apparmor for session wrapper
 ###############################
 
 apparmordir = $(sysconfdir)/apparmor.d/
@@ -62,7 +62,7 @@ apparmor_DATA = \
 	lightdm-remote-session-uccsconfigure
 
 lightdm-remote-session-uccsconfigure: lightdm-remote-session-uccsconfigure.in
-	@sed -e "s|\@pkgdatadir\@|$(pkgdatadir)|" $< > $@
+	@sed -e "s|\@pkglibexecdir\@|$(pkglibexecdir)|" $< > $@
 
 EXTRA_DIST += lightdm-remote-session-uccsconfigure.in
 CLEANFILES += lightdm-remote-session-uccsconfigure

@@ -5,7 +5,7 @@
 
 #include <tunables/global>
 
-@pkgdatadir@/uccsconfigure-session {
+@pkglibexecdir@/uccsconfigure-session-wrapper {
   #include <abstractions/authentication>
   #include <abstractions/nameservice>
   #include <abstractions/wutmp>
