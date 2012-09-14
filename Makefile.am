@@ -41,6 +41,20 @@ EXTRA_DIST += uccsconfigure-session.in
 CLEANFILES += uccsconfigure-session
 
 ###############################
+# Apparmor for session script
+###############################
+
+apparmordir = $(sysconfdir)/apparmor.d/
+apparmor_DATA = \
+	lightdm-remote-session-uccsconfigure
+
+lightdm-remote-session-uccsconfigure: lightdm-remote-session-uccsconfigure.in
+	@sed -e "s|\@pkgdatadir\@|$(pkgdatadir)|" $< > $@
+
+EXTRA_DIST += lightdm-remote-session-uccsconfigure.in
+CLEANFILES += lightdm-remote-session-uccsconfigure
+
+###############################
 # Autostart Firefox
 ###############################
 
