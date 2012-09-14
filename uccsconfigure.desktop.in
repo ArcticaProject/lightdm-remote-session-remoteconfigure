@@ -1,8 +1,8 @@
 [Desktop Entry]
 Name=UCCS Configure
 Comment=Setup a UCCS Account
-Exec=@pkgdatadir@/uccsconfigure-session
-TryExec=@pkgdatadir@/uccsconfigure-session
+Exec=@pkglibexecdir@/uccsconfigure-session-wrapper
+TryExec=@pkglibexecdir@/uccsconfigure-session-wrapper
 Icon=
 Type=Application
 X-LightDM-PAM-Service=lightdm-remote-uccsconfigure
