@@ -1,4 +1,4 @@
-AC_INIT([lightdm-remote-session-uccsconfigure], [0.3])
+AC_INIT([lightdm-remote-session-uccsconfigure], [0.3+apparmor])
 
 AM_INIT_AUTOMAKE([1.11 -Wno-portability])
 AM_SILENT_RULES([yes])
