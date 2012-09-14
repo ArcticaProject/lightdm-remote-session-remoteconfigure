@@ -41,6 +41,19 @@ EXTRA_DIST += uccsconfigure-session.in
 CLEANFILES += uccsconfigure-session
 
 ###############################
+# The session wrapper
+###############################
+
+pkglibexec_PROGRAMS = \
+	uccsconfigure-session-wrapper
+
+uccsconfigure_session_wrapper_SOURCES = \
+	uccsconfigure-session-wrapper.c
+uccsconfigure_session_wrapper_CFLAGS = \
+	-DPKGDATADIR="\"$(pkgdatadir)\"" \
+	-Wall -Werror
+
+###############################
 # Apparmor for session script
 ###############################
 
