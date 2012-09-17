@@ -1,7 +1,11 @@
-AC_INIT([lightdm-remote-session-uccsconfigure], [0.3])
+AC_INIT([lightdm-remote-session-uccsconfigure], [0.3+apparmor])
 
 AM_INIT_AUTOMAKE([1.11 -Wno-portability])
 AM_SILENT_RULES([yes])
+
+AC_PROG_CC
+AC_PROG_INSTALL
+AM_PROG_CC_C_O
 
 ###########################
 # Local Install

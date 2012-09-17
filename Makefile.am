@@ -10,7 +10,7 @@ lightdm_session_DATA = \
 	uccsconfigure.desktop
 
 %.desktop: %.desktop.in
-	@sed -e "s|\@pkgdatadir\@|$(pkgdatadir)|" $< > $@
+	@sed -e "s|\@pkglibexecdir\@|$(pkglibexecdir)|" $< > $@
 
 EXTRA_DIST += uccsconfigure.desktop.in
 CLEANFILES += uccsconfigure.desktop
@@ -39,6 +39,33 @@ uccsconfigure-session: uccsconfigure-session.in
 
 EXTRA_DIST += uccsconfigure-session.in
 CLEANFILES += uccsconfigure-session
+
+###############################
+# The session wrapper
+###############################
+
+pkglibexec_PROGRAMS = \
+	uccsconfigure-session-wrapper
+
+uccsconfigure_session_wrapper_SOURCES = \
+	uccsconfigure-session-wrapper.c
+uccsconfigure_session_wrapper_CFLAGS = \
+	-DPKGDATADIR="\"$(pkgdatadir)\"" \
+	-Wall -Werror
+
+###############################
+# Apparmor for session wrapper
+###############################
+
+apparmordir = $(sysconfdir)/apparmor.d/
+apparmor_DATA = \
+	lightdm-remote-session-uccsconfigure
+
+lightdm-remote-session-uccsconfigure: lightdm-remote-session-uccsconfigure.in
+	@sed -e "s|\@pkglibexecdir\@|$(pkglibexecdir)|" $< > $@
+
+EXTRA_DIST += lightdm-remote-session-uccsconfigure.in
+CLEANFILES += lightdm-remote-session-uccsconfigure
 
 ###############################
 # Autostart Firefox
