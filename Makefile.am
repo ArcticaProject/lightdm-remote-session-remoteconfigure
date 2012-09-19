@@ -10,7 +10,10 @@ lightdm_session_DATA = \
 	uccsconfigure.desktop
 
 %.desktop: %.desktop.in
-	@sed -e "s|\@pkglibexecdir\@|$(pkglibexecdir)|" $< > $@
+	@sed \
+		-e "s|\@pkgdatadir\@|$(pkgdatadir)|" \
+		-e "s|\@pkglibexecdir\@|$(pkglibexecdir)|" \
+		$< > $@
 
 EXTRA_DIST += uccsconfigure.desktop.in
 CLEANFILES += uccsconfigure.desktop
