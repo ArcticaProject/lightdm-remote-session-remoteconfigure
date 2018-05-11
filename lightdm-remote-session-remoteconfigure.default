@@ -1,3 +1,10 @@
+# lightdm-remote-session-remoteconfigure: Tweaking it...
+
 # URL for the Remote Logon Configuration tool for this site / host
 # Adapt to your needs and make sure, Firefox can handle the URL.
-#REMOTECONFIGURE_URL=https://service.arctica-project.org/remoteconfigure
+
+#REMOTECONFIGURE_URL="https://service.arctica-project.org/remoteconfigure"
+
+# X session manager that we run this browser session in, it needs
+# to be an X session manager that is able to load XDG autostart applications.
+#X_SESSION_MANAGER="x-session-manager"
