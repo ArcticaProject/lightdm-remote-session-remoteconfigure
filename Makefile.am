@@ -12,7 +12,7 @@ lightdm_session_DATA = \
 %.desktop: %.desktop.in
 	@sed \
 		-e "s|\@pkgdatadir\@|$(pkgdatadir)|" \
-		-e "s|\@pkglibexecdir\@|$(pkglibexecdir)|" \
+		-e "s|\@libexecdir\@|$(libexecdir)|" \
 		$< > $@
 
 EXTRA_DIST += remoteconfigure.desktop.in
@@ -47,7 +47,7 @@ CLEANFILES += remoteconfigure-session
 # The session wrapper
 ###############################
 
-pkglibexec_PROGRAMS = \
+libexec_PROGRAMS = \
 	remoteconfigure-session-wrapper
 
 remoteconfigure_session_wrapper_SOURCES = \
@@ -65,7 +65,7 @@ apparmor_DATA = \
 	lightdm-remote-session-remoteconfigure
 
 lightdm-remote-session-remoteconfigure: lightdm-remote-session-remoteconfigure.in
-	@sed -e "s|\@pkglibexecdir\@|$(pkglibexecdir)|" $< > $@
+	@sed -e "s|\@libexecdir\@|$(libexecdir)|" $< > $@
 
 EXTRA_DIST += lightdm-remote-session-remoteconfigure.in
 CLEANFILES += lightdm-remote-session-remoteconfigure
