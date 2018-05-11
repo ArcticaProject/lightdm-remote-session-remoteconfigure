@@ -25,5 +25,8 @@ fi
 mkdir -p ~/.config/autostart/
 cp @pkgdatadir@/firefox-remoteconfigure.desktop ~/.config/autostart/
 
+# hide guest sessions startup warning about its vanity of being...
+touch "$HOME"/.skip-guest-warning-dialog
+
 # Final thing is to run a minimal desktop session
 exec "${X_SESSION_MANAGER}"
