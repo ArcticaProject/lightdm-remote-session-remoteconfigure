@@ -1,0 +1,27 @@
+Source: lightdm-remote-session-remoteconfigure
+Section: misc
+Priority: optional
+Maintainer: Artica Project <devs@lists.arctica-project.org>
+Uploaders:
+ Mike Gabriel <mike.gabriel@das-netzwerkteam.de>
+Build-Depends:
+ debhelper (>= 9),
+ dh-apparmor,
+ cdbs,
+ dh-autoreconf,
+Standards-Version: 4.1.4
+Homepage: http://github.com/ArcticaProject/lightdm-remote-session-remoteconfigure
+Vcs-Git: https://github.com/ArcticaProject/lightdm-remote-session-remoteconfigure/
+Vcs-Browser: https://github.com/ArcticaProject/lightdm-remote-session-remoteconfigure/
+
+Package: lightdm-remote-session-remoteconfigure
+Architecture: any
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Suggests:
+ apparmor,
+Description: Configure Remote Logon for LightDM
+ The configuration files needed and scripts required to launch
+ a webbrowser from LightDM's Remote Logon prompt box and configure
+ Remote Logon accounts.

@@ -1,0 +1,3 @@
+# URL for the Remote Logon Configuration tool for this site / host
+# Adapt to your needs and make sure, Firefox can handle the URL.
+#REMOTECONFIGURE_URL=https://service.arctica-project.org/remoteconfigure

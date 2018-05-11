@@ -17,14 +17,7 @@
 
 # Set up a Firefox autostart
 mkdir -p ~/.config/autostart/
-cp @pkgdatadir@/firefox-uccsconfigure.desktop ~/.config/autostart/
+cp @pkgdatadir@/firefox-remoteconfigure.desktop ~/.config/autostart/
 
-# Set up the Compiz profile
-export COMPIZ_CONFIG_PROFILE="ubuntu"
-
-# Unity Configurations
-gsettings set org.compiz.unityshell:/org/compiz/profiles/unity/plugins/unityshell/ launcher-hide-mode 1
-gsettings set org.compiz.unityshell:/org/compiz/profiles/unity/plugins/unityshell/ automaximize-value 1
-
-# Final thing is to run the standard Unity session
-exec gnome-session --session=ubuntu
+# Final thing is to run a minimal desktop session
+exec openbox

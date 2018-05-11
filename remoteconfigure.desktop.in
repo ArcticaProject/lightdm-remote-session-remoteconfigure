@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Remote Logon Configure
+Comment=Setup a Remote Logon Account
+Exec=@pkglibexecdir@/remoteconfigure-session-wrapper
+TryExec=@pkglibexecdir@/remoteconfigure-session-wrapper
+Icon=
+Type=Application
+X-LightDM-PAM-Service=lightdm-remote-remoteconfigure

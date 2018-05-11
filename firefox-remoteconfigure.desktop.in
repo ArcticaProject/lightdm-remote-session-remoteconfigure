@@ -1,10 +1,10 @@
 [Desktop Entry]
 Version=1.0
-Name=Configure UCCS
-Comment=Configure UCCS using the web
+Name=Configure Remote Logon
+Comment=Configure Remote Logon using the web
 Keywords=Internet;WWW;Browser;Web;Explorer
-Exec=@pkgdatadir@/firefox-uccsconfigure.sh
-TryExec=@pkgdatadir@/firefox-uccsconfigure.sh
+Exec=@pkgdatadir@/firefox-remoteconfigure.sh
+TryExec=@pkgdatadir@/firefox-remoteconfigure.sh
 Terminal=false
 X-MultipleArgs=false
 Type=Application

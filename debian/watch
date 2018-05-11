@@ -1,0 +1,3 @@
+version=3
+opts=pgpsigurlmangle=s/$/.asc/ \
+http://releases.arctica-project.org/source/lightdm-remote-session-remoteconfigure/lightdm-remote-session-remoteconfigure-(.+)\.tar\.gz
